@@ -1,5 +1,4 @@
-const API_URL = "https://ai-code-reviewer-api-rr1y.onrender.com";
-
+const API_URL = import.meta.env.VITE_API_URL;
 
 export async function reviewCode(code: string, language: string) {
   const response = await fetch(API_URL, {
@@ -16,5 +15,6 @@ export async function reviewCode(code: string, language: string) {
   if (!response.ok) {
     throw new Error("Server error");
   }
+
   return await response.json();
 }
