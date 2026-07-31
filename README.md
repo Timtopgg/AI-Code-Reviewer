@@ -61,12 +61,6 @@ https://ai-code-reviewer-api-rr1y.onrender.com
 
 ---
 
-## Mobile Version
-
-![Mobile Version](assets/mobile.png)
-
----
-
 # 🛠 Tech Stack
 
 ## Frontend
