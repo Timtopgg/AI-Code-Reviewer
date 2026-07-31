@@ -1,67 +1,148 @@
 # 🤖 AI Code Reviewer
 
-An AI-powered web application that reviews source code using Google Gemini.
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.116-009688?logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite)
+![Gemini](https://img.shields.io/badge/Google-Gemini-4285F4)
 
-The application allows users to write or upload code, choose the programming language, and receive a detailed AI-generated code review with suggestions and an improved version of the code.
+An AI-powered web application that analyzes source code using **Google Gemini AI** and provides detailed code reviews, improvement suggestions, bug detection, and optimized code examples.
+
+Users can write code directly in the editor or upload source code files, choose the programming language, and receive a professional AI-generated review in seconds.
 
 ---
 
-## ✨ Features
+# 🌐 Live Demo
+
+### Frontend
+
+https://ai-code-reviewer-rho-bay.vercel.app
+
+### Backend API
+
+https://ai-code-reviewer-api-rr1y.onrender.com
+
+---
+
+# ✨ Features
 
 - 🤖 AI-powered code review
 - 💻 Monaco Code Editor
 - 📂 Upload source code files
-- 🌐 Multiple programming languages
-- 📝 Markdown rendering
+- 🌐 Supports multiple programming languages
+- 📝 Markdown formatted AI responses
 - 🎨 Syntax highlighting
 - 📋 Copy review to clipboard
-- ⚡ FastAPI backend
+- ⚡ FastAPI REST API
 - ⚛️ React + TypeScript frontend
+- ☁️ Deployed on Vercel & Render
+- 🔒 Environment variable configuration
 
 ---
 
-## 📸 Screenshots
+# 📸 Screenshots
 
-### Main Interface
+## Main Interface
 
-> *(Screenshots will be added soon.)*
+![Main Interface](assets/Entry.png)
 
 ---
 
-## 🛠 Tech Stack
+## Upload Code
 
-### Frontend
+![Upload Code](assets/Code.png)
+
+---
+
+## AI Review
+
+![AI Review](assets/Result.png)
+
+---
+
+## Mobile Version
+
+![Mobile Version](assets/mobile.png)
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
 
 - React
 - TypeScript
 - Vite
 - Monaco Editor
 - React Markdown
-- React Select
 - Highlight.js
 
-### Backend
+## Backend
 
 - Python
 - FastAPI
 - Google Gemini API
 - Pydantic
 
+## Deployment
+
+- Vercel
+- Render
+
+## Version Control
+
+- Git
+- GitHub
+
 ---
 
-## 🚀 Installation
+# 📂 Project Structure
 
-### Clone the repository
+```
+AI-Code-Reviewer
+│
+├── assets
+│   ├── home.png
+│   ├── upload.png
+│   ├── review.png
+│   └── mobile.png
+│
+├── backend
+│   ├── ai.py
+│   ├── main.py
+│   ├── prompt.py
+│   ├── requirements.txt
+│   └── .env.example
+│
+├── frontend
+│   ├── public
+│   ├── src
+│   │   ├── components
+│   │   ├── services
+│   │   ├── App.tsx
+│   │   └── main.tsx
+│   ├── package.json
+│   └── .env.example
+│
+└── README.md
+```
+
+---
+
+# 🚀 Installation
+
+## Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/AI-Code-Reviewer.git
+git clone https://github.com/Timtopgg/AI-Code-Reviewer.git
 
 cd AI-Code-Reviewer
 ```
 
 ---
 
-### Backend
+## Backend
 
 ```bash
 cd backend
@@ -73,7 +154,7 @@ python -m uvicorn main:app --reload
 
 ---
 
-### Frontend
+## Frontend
 
 ```bash
 cd frontend
@@ -85,62 +166,86 @@ npm run dev
 
 ---
 
-## 🔑 Environment Variables
+# 🔑 Environment Variables
 
-### Backend
+## Backend
 
-Create a `.env` file inside the `backend` folder:
+Create a `.env` file inside the `backend` folder.
 
 ```env
 GEMINI_API_KEY=your_api_key
 ```
 
-### Frontend
+---
 
-Create a `.env` file inside the `frontend` folder:
+## Frontend
+
+Create a `.env` file inside the `frontend` folder.
+
+### Local development
 
 ```env
 VITE_API_URL=http://127.0.0.1:8000
 ```
 
----
+### Production
 
-## 📂 Project Structure
-
-```
-AI-Code-Reviewer
-│
-├── backend
-│   ├── ai.py
-│   ├── main.py
-│   ├── prompt.py
-│   └── requirements.txt
-│
-├── frontend
-│   ├── public
-│   ├── src
-│   │   ├── components
-│   │   ├── services
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   └── package.json
-│
-└── README.md
+```env
+VITE_API_URL=https://ai-code-reviewer-api-rr1y.onrender.com
 ```
 
 ---
 
-## 📌 Future Improvements
+# 📡 API
 
-- Authentication
+## Review Code
+
+**POST**
+
+```
+/review
+```
+
+### Request
+
+```json
+{
+  "code": "print('Hello World')",
+  "language": "python"
+}
+```
+
+### Response
+
+```json
+{
+  "review": "AI generated review..."
+}
+```
+
+---
+
+# 📌 Future Improvements
+
+- User authentication
 - Review history
 - Export review as PDF
-- Multiple AI models
+- Multiple AI model support
 - Docker support
-- Light/Dark theme switch
+- Dark / Light theme switch
+- Review score
+- Download review as Markdown
 
 ---
 
-## 👨‍💻 Author
+# 👨‍💻 Author
 
-Created by Tymur Svyrydenko
+**Tymur Svyrydenko**
+
+GitHub:
+
+https://github.com/Timtopgg
+
+---
+
+⭐ If you found this project useful, consider giving it a star on GitHub!
